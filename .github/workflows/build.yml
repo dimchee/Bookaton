@@ -1,6 +1,7 @@
 name: Create Pages.tex, Build LaTeX, Upload Book
 on:
   pull_request:
+    types: closed
     branches: main
 jobs:
   create-commit-build-upload:
