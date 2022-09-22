@@ -2,6 +2,8 @@ name: Split Book.pdf
 on:
   push:
     paths: 'Book.pdf'
+env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 jobs:
   split-book:
     runs-on: ubuntu-latest
@@ -20,3 +22,7 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           message: 'Remove Book.pdf, Add Parts'
+      - name: Fix Labels
+        run: .github/scripts/fixLabels.sh
+      - name: Automaticaly Create Issues
+        run: gh workflow run createLaTeXIssues.yml
