@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Create Issues from Parts
         run: |
-          for i in $(ls Parts)
+          for PART in $(ls Parts)
           do
-            .github/scripts/createIssue.sh $i
+            .github/scripts/createIssue.sh ${PART%.*}
           done
