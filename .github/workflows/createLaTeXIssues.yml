@@ -1,6 +1,8 @@
 name: Create Issues from Parts
 on:
   workflow_dispatch:
+env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 jobs:
   split-book:
     runs-on: ubuntu-latest
