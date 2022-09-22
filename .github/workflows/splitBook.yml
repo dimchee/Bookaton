@@ -1,0 +1,20 @@
+name: Split Book.pdf
+on:
+  push:
+    paths: 'Book.pdf'
+jobs:
+  split-book:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install PDFtk
+        run: apt install pdftk
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Split to Pages
+        run: .github/scripts/splitBook.sh Book.pdf 5
+      - name: Remove Book.pdf
+        run: rm Book.pdf
+      - name: Commit Changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: 'Remove Book.pdf, Add Parts'
