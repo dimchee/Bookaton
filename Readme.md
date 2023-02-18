@@ -7,10 +7,12 @@ First, create new github repository from [template](https://github.com/dimchee/B
 gh repo create --public --clone --template https://github.com/dimchee/Bookaton <repo_name>
 ```
 - Now you should have almost empty directory.
-- First, we need to modify permissions on created repository. 
-Navigate to it's page  in browser,
-navigate to `Settings` pane, then under `Actions` tab go to `General`.
-Under `Workflow permissions` select `Read and write permissions`, and Save changes.
+- First, we need to modify permissions on created repository: 
+  - Navigate to it's page  in browser,
+  - navigate to `Settings` pane, then under `Actions` tab go to `General`.
+  - Under `Workflow permissions` select `Read and write permissions`.
+  - Check `Allow GitHub Actions to create and approve pull requests` box.
+  - Save changes.
 - If you don't want to be spamed by notifications, Click on `Unwatch` button and
 select `Ignore`
 - You are ready to add Your `.pdf` File to the root of repository, and name
