@@ -2,6 +2,7 @@ name: Create Pages.tex, Build LaTeX, Upload Book
 on:
   push:
     branches: main
+    paths: Src/**
 jobs:
   create-commit-build-upload:
     runs-on: ubuntu-latest
