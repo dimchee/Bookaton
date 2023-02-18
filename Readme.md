@@ -6,8 +6,12 @@ First, create new github repository from [template](https://github.com/dimchee/B
 ```sh
 gh repo create --public --clone --template https://github.com/dimchee/Bookaton <repo_name>
 ```
-Now you should have almost empty directory.
-Add Your `.pdf` File to the root of repository, and name
+- Now you should have almost empty directory.
+- First, we need to modify permissions on created repository. 
+Navigate to it's page  in browser,
+navigate to `Settings` pane, then under `Actions` tab go to `General`.
+Under `Workflow permissions` select `Read and write permissions`, and Save changes.
+- You are ready to add Your `.pdf` File to the root of repository, and name
 it `Book.pdf`, for example like this:
 ```sh
 mv <book_name>.pdf <repo_name>/Book.pdf
