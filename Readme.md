@@ -11,6 +11,8 @@ gh repo create --public --clone --template https://github.com/dimchee/Bookaton <
 Navigate to it's page  in browser,
 navigate to `Settings` pane, then under `Actions` tab go to `General`.
 Under `Workflow permissions` select `Read and write permissions`, and Save changes.
+- If you don't want to be spamed by notifications, Click on `Unwatch` button and
+select `Ignore`
 - You are ready to add Your `.pdf` File to the root of repository, and name
 it `Book.pdf`, for example like this:
 ```sh
@@ -36,3 +38,4 @@ add your work to Repo, and automaticaly release final `.pdf`.
 - Warning: LaTeX submission comments are detected by `\documentclass{` begining
 - Warning: Don't add any definitions in Issues, we are extracting what is between 
 `\begin{document}` and `\end{document}`.
+- If you don't want to be spamed by notifications, navigate to repository page and click on `Unwatch` button and select `Ignore`
