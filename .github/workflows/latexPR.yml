@@ -55,4 +55,4 @@ jobs:
         with:
           branch: ${{ format( 'page-fix/{0}', github.event.issue.title) }} 
           title: ${{ format( 'Add LaTeX of pages {0}', github.event.issue.title) }}
-          body: ${{ format( '$\\LaTeX$ change, Issue #{0}', github.event.issue.number) }}
+          body: ${{ format( '$\\LaTeX$ change, Issue \#{0}', github.event.issue.number) }}
