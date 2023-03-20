@@ -14,6 +14,7 @@ $ gh repo create --public --clone --template https://github.com/dimchee/Bookaton
   - Under `Workflow permissions` select `Read and write permissions`.
   - Check `Allow GitHub Actions to create and approve pull requests` box.
   - Save changes.
+  - Navigate back to repository page
 - If you don't want to be spamed by notifications, Click on `Unwatch` button and
 select `Ignore`
 <!-- - You are ready to add Your `.pdf` File to the root of repository, and name -->
@@ -22,8 +23,8 @@ select `Ignore`
 <!-- mv <book_name>.pdf <repo_name>/Book.pdf -->
 <!-- cd <repo_name> -->
 - You are now ready to add your Book. Scaned book should be prepared as *one* directory of `JPEG` images
-- To be able to split Book, install [Bookaton Splitter](https://github.com/dimchee/BookatonSplitter),
-    and then follow `Quick Start` instructions.
+- To be able to split Book, install [Bookaton Splitter](https://github.com/dimchee/BookatonSplitter). 
+    Navigate to it's repository, then follow `Quick Start` instructions.
 - Now you should have `Parts` directory with book splitted to several `pdf` files.
 - Add `Parts` directory to your repository
 ```sh
@@ -47,7 +48,8 @@ git push
 
 ## Usage (contributor)
 - You can work in any LaTeX editor you like, but it is recomended to use [overleaf](https://www.overleaf.com).
-- Pick an Issue from freshly created repository issues page
+- Navigate to `Issues` pane and from option `Sort` select `Oldest`, then pick an `Issue`
+- Comment `Assign me` to assign yourself selected `Issue`
 - Copy this [Template](https://www.overleaf.com/read/yzxzjbfjcxjx), and write some LaTeX
 - Paste your LaTeX to Issue you were working on, and everything else should happen automagicaly!
 - Warning: LaTeX submission comments are detected by `\documentclass{` begining
