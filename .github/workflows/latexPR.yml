@@ -43,6 +43,11 @@ jobs:
         with:
           message: "# There was an error in submited code\n ${{ env.CompileOutput }}"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: If Check succeed, Comment success
+        uses: ben-z/actions-comment-on-issue@1.0.2
+        with:
+          message: "# Document successfully compiled 🎉"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Update Raw Page 
         run: .github/scripts/updateRawPage.sh $FILE
       - name: Create PR
