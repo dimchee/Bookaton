@@ -5,33 +5,45 @@
 You don't need to, but i highly recommend installing [github cli](https://cli.github.com/).
 First, create new github repository from [template](https://github.com/dimchee/Bookaton):
 ```sh
-gh repo create --public --clone --template https://github.com/dimchee/Bookaton <repo_name>
+$ gh repo create --public --clone --template https://github.com/dimchee/Bookaton <repo_name>
 ```
 - Now you should have almost empty directory.
 - First, we need to modify permissions on created repository: 
   - Navigate to it's page  in browser,
-  - navigate to `Settings` pane, then under `Actions` tab go to `General`.
+  - Navigate to `Settings` pane, then under `Actions` tab go to `General`.
   - Under `Workflow permissions` select `Read and write permissions`.
   - Check `Allow GitHub Actions to create and approve pull requests` box.
   - Save changes.
 - If you don't want to be spamed by notifications, Click on `Unwatch` button and
 select `Ignore`
-- You are ready to add Your `.pdf` File to the root of repository, and name
-it `Book.pdf`, for example like this:
+<!-- - You are ready to add Your `.pdf` File to the root of repository, and name -->
+<!-- it `Book.pdf`, for example like this: -->
+<!-- ```sh -->
+<!-- mv <book_name>.pdf <repo_name>/Book.pdf -->
+<!-- cd <repo_name> -->
+- You are now ready to add your Book. Scaned book should be prepared as *one* directory of `JPEG` images
+- To be able to split Book, install [Bookaton Splitter](https://github.com/dimchee/BookatonSplitter),
+    and then follow `Quick Start` instructions.
+- Now you should have `Parts` directory with book splitted to several `pdf` files.
+- Add `Parts` directory to your repository
 ```sh
-mv <book_name>.pdf <repo_name>/Book.pdf
-cd <repo_name>
+$ mv Parts <repo_name>
+$ cd <repo_name>
 ```
-Now commit changes, push, and wait for action to do it's magic
+- Now commit changes, and push
 ```sh
-git add Book.pdf
-git commit -m "Add Book.pdf"
+git add Parts/
+git commit -m "Add Parts"
 git push
 ```
-This will take a while, you can track progress on github actions page of repo.
-Now you should have everything prepared.
-Commenting LaTeX Code directly to any Issue labeled with LaTeX will
-add your work to Repo, and automaticaly release final `.pdf`.
+- Now we should be able to create issues for splitted book
+    - Navigate to repository's page in browser
+    - Navigate to `Actions` pane, then on left select `Create Issues from Parts` tab
+    - On right should be button `Run workflow`, click on it
+    - This will take a while, you can track progress in `Actions` tab, or in `Issues` pane directly
+- Now you should have everything prepared.
+- Commenting LaTeX Code directly to any Issue labeled with LaTeX will 
+    add your work to Repo, and automaticaly release final `.pdf`.
 
 ## Usage (contributor)
 - You can work in any LaTeX editor you like, but it is recomended to use [overleaf](https://www.overleaf.com).
