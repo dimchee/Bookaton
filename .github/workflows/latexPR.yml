@@ -54,5 +54,5 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         with:
           branch: ${{ format( 'page-fix/{0}', github.event.issue.title) }} 
-          title: ${{ format( 'Add LaTeX of pages {0}', github.event.issue.title ) }}
-          body: "Automated change, triggered by $\\LaTeX$ comment on Issue"
+          title: ${{ format( 'Add LaTeX of pages {0}', github.event.issue.title) }}
+          body: ${{ format( '$\\LaTeX$ change, Issue #{0}', github.event.issue.number) }}
