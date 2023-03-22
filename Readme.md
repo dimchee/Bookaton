@@ -50,7 +50,8 @@ git push
 - You can work in any LaTeX editor you like, but it is recomended to use [overleaf](https://www.overleaf.com).
 - Navigate to `Issues` pane and from option `Sort` select `Oldest`, then pick an `Issue`
 - Comment `Assign me` to assign yourself selected `Issue`
-- Copy this [Template](https://www.overleaf.com/read/yzxzjbfjcxjx), and write some LaTeX
+- Select issue with label LaTex, copy this [this template](https://www.overleaf.com/read/yzxzjbfjcxjx), and write some LaTeX
+- Or select issue with label Tikz, copy [this template](https://www.overleaf.com/read/pfsyfmmbcfwq), and write some Tikz
 - Paste your LaTeX to Issue you were working on, and everything else should happen automagicaly!
 - Warning: LaTeX submission comments are detected by `\documentclass{` begining
 - Warning: Don't add any definitions in Issues, we are extracting what is between 
