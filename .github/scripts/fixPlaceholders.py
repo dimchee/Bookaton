@@ -16,7 +16,7 @@ with open(filePath, 'r') as file:
             slikaName = title + '-slika' + str(i)
             with open("Src/Slike/{}.tex".format(slikaName), 'w') as tikz:
                 tikz.write(ph.group(1))
-                newline = "\\input{{../Slike/{}.tex}}".format(slikaName)
+                newline = "\\input{{ Slike/{} }}".format(slikaName)
             subprocess.Popen(['.github/scripts/createTikzIssue.sh {} {}'.format(title, slikaName)]
                              , shell = True
                              , env = os.environ)
